@@ -5,9 +5,10 @@ The zeroth number in the fibonacci sequence is 0. The first number is 1
 Negative numbers should return None
 """
 def fibonacci(position):
+  if(position == 0):
+      return None
   if(position < 0):
-    return None
+    return TypeError("Invalid input")
   elif(position == 1 or position == 2):
     return 1
-  else:
-    return fibonacci(position - 1) + fibonacci(position - 2)
+  return fibonacci(position - 1) + fibonacci(position - 2)
